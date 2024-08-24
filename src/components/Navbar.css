@@ -1,0 +1,63 @@
+/* 전체 헤더 스타일링 */
+.navbar {
+  background-color: #ffffff; 
+  padding: 15px 0;  /* 위아래 패딩을 줄여서 더 컴팩트하게 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 그림자 줄이기 */
+}
+
+/* 네비게이션 바 스타일링 */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 200px;  /* 양쪽 여백 줄이기 */
+  padding: 0;
+}
+
+/* 왼쪽 끝에 위치한 홈 링크 */
+.home-link {
+  margin-right: auto;
+}
+
+/* 링크 스타일링 */
+.nav-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+  margin-left: 20px;  /* 나머지 링크 간의 간격 */
+}
+
+/* 링크에 마우스를 올렸을 때 */
+.nav-link:hover {
+  color: #FFD700;  /* 황금색 */
+}
+
+/* 링크를 클릭했을 때 */
+.nav-link:active {
+  color: #FF4500;  /* 주황색 */
+}
+
+/* 로그인 및 회원가입 버튼 스타일링 */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #4A90E2;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+.button:hover {
+  background-color: #FF4500;  /* 주황색 */
+  color: white;
+}
