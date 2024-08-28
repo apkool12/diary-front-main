@@ -1,4 +1,3 @@
-/* Center the diary container */
 .diary-container {
   max-width: 600px;
   margin: 50px auto;
@@ -8,7 +7,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the title */
 .diary-title {
   text-align: center;
   color: #333;
@@ -16,7 +14,6 @@
   margin-bottom: 20px;
 }
 
-/* Style the date picker */
 .diary-date-picker {
   display: block;
   width: 100%;
@@ -28,7 +25,6 @@
   box-sizing: border-box;
 }
 
-/* Style the textarea */
 .diary-textarea {
   width: 100%;
   height: 100px;
@@ -42,17 +38,16 @@
   transition: border-color 0.3s ease;
 }
 
-/* Change border color on focus */
 .diary-textarea:focus {
   border-color: #888;
   outline: none;
 }
 
-/* Style the add/update entry button */
 .diary-button {
   display: block;
   width: 100%;
   padding: 10px;
+  font-family: 'nanum_main';
   font-size: 1.2rem;
   color: white;
   background-color: rgb(224, 129, 91);
@@ -62,12 +57,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the button */
 .diary-button:hover {
   background-color: rgb(200, 110, 75);
 }
 
-/* Style the message for the last entry date */
 .diary-message {
   text-align: center;
   margin: 20px 0;
@@ -79,14 +72,12 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the list of entries */
 .diary-entries {
   list-style-type: none;
   padding: 0;
   margin-top: 20px;
 }
 
-/* Style individual diary entries */
 .diary-entry {
   padding: 10px;
   background-color: #fff;
@@ -98,12 +89,10 @@
   position: relative;
 }
 
-/* Style entry text */
 .diary-entry p {
   margin: 0;
 }
 
-/* Style the controls for editing and deleting entries */
 .diary-entry-controls {
   position: absolute;
   right: 10px;
@@ -112,7 +101,6 @@
   gap: 10px;
 }
 
-/* Style for edit and delete buttons */
 .diary-entry-controls button {
   background-color: #f0f0f0;
   border: none;
@@ -123,18 +111,16 @@
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the control buttons */
 .diary-entry-controls button:hover {
   background-color: #e0e0e0;
 }
 
-/* No entries message styling */
 .diary-no-entry {
   color: #777;
+  font-family: 'nanum_light';
   text-align: center;
 }
 
-/* Hover effect for the entries */
 .diary-entry:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

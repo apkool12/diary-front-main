@@ -1,42 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Homepage.css';
 
 function HomePage() {
-  const [tasks, setTasks] = useState([]);
-  const [task, setTask] = useState('');
+  const [text, setText] = useState('');
+  const message = '" 당신의 개발을 응원합니다. "';
 
-  const addTask = () => {
-    if (task.trim()) {
-      setTasks([...tasks, task]);
-      setTask('');
-    }
-  };
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      setText(message.slice(0, index + 1));
+      index++;
+      if (index >= message.length) {
+        clearInterval(intervalId);
+      }
+    }, 180);
+    
+    return () => clearInterval(intervalId);
+  }, [message]);
 
   return (
-    <div className='Home'>
-      <div className="container">
-        <header className="header">
-          <h1>오늘도 좋은 개발하시길 바래요</h1>
-        </header>
-
-        <div className="content-box">
-          <h2>오늘 하루를 정리해봐요</h2> 
-          <div className="task-input">
-            <input 
-              type="text" 
-              value={task} 
-              onChange={(e) => setTask(e.target.value)} 
-              placeholder="할 일을 입력하세요" 
-            />
-            <button onClick={addTask}>추가</button>
-          </div>
-          <ul className="task-list">
-            {tasks.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <div className="homepage-container">
+      <h1 className="homepage-text">{text}</h1>
     </div>
   );
 }

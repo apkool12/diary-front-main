@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "nanum_main";
+    font-weight: normal;
+    src: url("./Nanum.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "nanum_bold";
+    font-weight: normal;
+    src: url("./Nanum_bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "nanum_light";
+    font-weight: normal;
+    src: url("./NanumL1.ttf") format("truetype");
+}

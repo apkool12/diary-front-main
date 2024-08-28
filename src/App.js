@@ -7,7 +7,7 @@ import Diary from './pages/Diary';
 import DevLog from './pages/DevLog';
 import Profile from './components/Profile';
 import Settings from './pages/Settings';
-import TodoList from './components/TodoList';
+import Project from './components/Project.js';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/devlog" element={<DevLog />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/todo" element={<TodoList />} />
+        <Route path="/project" element={<Project />} />
       </Routes>
     </Router>
   );

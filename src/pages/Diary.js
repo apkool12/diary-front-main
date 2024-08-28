@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import './Diary.css'; // Import the CSS file
-
+import './Diary.css';
 function Diary() {
   const [entries, setEntries] = useState({});
   const [newEntry, setNewEntry] = useState('');
   const [selectedDate, setSelectedDate] = useState(() => new Date().toISOString().slice(0, 10));
   const [lastEntryDate, setLastEntryDate] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
-  const [previousEntry, setPreviousEntry] = useState(''); // To store the original entry before editing
-
+  const [previousEntry, setPreviousEntry] = useState('');
   const handleAddEntry = () => {
     if (newEntry.trim()) {
       const dateEntries = entries[selectedDate] || [];
@@ -31,7 +29,7 @@ function Diary() {
 
       setNewEntry('');
       setLastEntryDate(selectedDate);
-      setPreviousEntry(''); // Reset the previous entry after saving
+      setPreviousEntry(''); 
     }
   };
 
@@ -47,8 +45,8 @@ function Diary() {
 
   const handleEditEntry = (index) => {
     const dateEntries = entries[selectedDate];
-    setNewEntry(dateEntries[index].edited); // Load the edited content for editing
-    setPreviousEntry(dateEntries[index].original); // Store the original content
+    setNewEntry(dateEntries[index].edited);
+    setPreviousEntry(dateEntries[index].original);
     setEditingIndex(index);
   };
 
@@ -71,7 +69,7 @@ function Diary() {
       />
 
       <button className="diary-button" onClick={handleAddEntry}>
-        {editingIndex !== null ? 'Update Entry' : 'Add Entry'}
+        {editingIndex !== null ? '기록 덮어쓰기' : '기록 추가하기'}
       </button>
 
       {lastEntryDate && (
@@ -93,7 +91,7 @@ function Diary() {
             </li>
           ))
         ) : (
-          <li className="diary-no-entry">No entries for this date.</li>
+          <li className="diary-no-entry">이 날에는 기록이 존재하지 않아요.</li>
         )}
       </ul>
     </div>
