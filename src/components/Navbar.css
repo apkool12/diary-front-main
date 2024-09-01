@@ -8,9 +8,9 @@
 /* 네비게이션 바 스타일링 */
 .navbar nav {
   display: flex;
-  justify-content: space-between; /* nav-list와 auth-buttons를 양 끝으로 배치 */
+  justify-content: space-between;
   align-items: center;
-  margin: 0 50px; /* 양쪽 여백 조정 */
+  margin: 0 50px;
 }
 
 .nav-list {
@@ -21,48 +21,82 @@
   padding: 0;
 }
 
-/* 왼쪽 끝에 위치한 홈 링크 */
+/* 홈 링크 스타일링 */
 .home-link {
-  margin-right: 20px; /* 홈 링크와 나머지 링크 간의 간격 */
+  margin-right: 20px;
 }
 
 /* 링크 스타일링 */
 .nav-link {
-  color: rgb(0, 0, 0);
+  color: #333;
   text-decoration: none;
   font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s;
   margin-left: 20px;
+  transition: color 0.3s ease;
 }
 
-/* 링크에 마우스를 올렸을 때 */
 .nav-link:hover {
-  color: #9387e6;
+  color: #555;
 }
 
-/* 링크를 클릭했을 때 */
-.nav-link:active {
-  color: #7A6CCF;
-}
-
-/* 로그인 및 회원가입 버튼 스타일링 */
+/* 유저 버튼 스타일링 */
 .auth-buttons {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.button {
+.user-button {
+  background-color: transparent;
+  color: #333;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.user-button:hover {
+  color: #555;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* 버튼 바로 아래에 위치 */
+  right: 0;
   background-color: #ffffff;
-  color: #4A90E2;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-left: 15px;
-  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 180px; /* 최소 너비 */
+  opacity: 0; /* 기본적으로 숨김 */
+  visibility: hidden; /* 기본적으로 숨김 */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.button:hover {
-  background-color: #7A6CCF;
-  color: white;
+/* 드롭다운 메뉴 보이기 */
+.user-button:hover .dropdown-menu,
+.user-button:focus .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 드롭다운 메뉴의 링크 스타일 */
+.dropdown-menu .nav-link {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .nav-link:hover {
+  background-color: #f0f0f0;
 }
