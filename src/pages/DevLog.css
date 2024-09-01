@@ -17,7 +17,7 @@
   .log-controls {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .log-controls button {
@@ -60,12 +60,13 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 38%;
-    margin-bottom: 30px;
+    margin-left: 80%;
+    margin-top: -20%;
+    margin-bottom: 40px;
   }
   
   .add-log:hover {
-    background-color: #0056b3;
+    background-color: #594caa;
   }
   
   .log-filter {

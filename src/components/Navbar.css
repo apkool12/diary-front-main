@@ -1,23 +1,29 @@
 /* 전체 헤더 스타일링 */
 .navbar {
   background-color: #ffffff; 
-  padding: 15px 0;  /* 위아래 패딩을 줄여서 더 컴팩트하게 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 그림자 줄이기 */
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 네비게이션 바 스타일링 */
+.navbar nav {
+  display: flex;
+  justify-content: space-between; /* nav-list와 auth-buttons를 양 끝으로 배치 */
+  align-items: center;
+  margin: 0 50px; /* 양쪽 여백 조정 */
+}
+
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 200px;  /* 양쪽 여백 줄이기 */
+  margin: 0;
   padding: 0;
 }
 
 /* 왼쪽 끝에 위치한 홈 링크 */
 .home-link {
-  margin-right: auto;
+  margin-right: 20px; /* 홈 링크와 나머지 링크 간의 간격 */
 }
 
 /* 링크 스타일링 */
@@ -27,17 +33,17 @@
   font-size: 16px;
   font-weight: bold;
   transition: color 0.3s;
-  margin-left: 20px;  /* 나머지 링크 간의 간격 */
+  margin-left: 20px;
 }
 
 /* 링크에 마우스를 올렸을 때 */
 .nav-link:hover {
-  color: #FFD700;  /* 황금색 */
+  color: #9387e6;
 }
 
 /* 링크를 클릭했을 때 */
 .nav-link:active {
-  color: #FF4500;  /* 주황색 */
+  color: #7A6CCF;
 }
 
 /* 로그인 및 회원가입 버튼 스타일링 */
@@ -56,8 +62,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* 버튼에 마우스를 올렸을 때 */
 .button:hover {
-  background-color: #FF4500;  /* 주황색 */
+  background-color: #7A6CCF;
   color: white;
 }

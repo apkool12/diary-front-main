@@ -8,6 +8,7 @@ import DevLog from './pages/DevLog';
 import Profile from './components/Profile';
 import Settings from './pages/Settings';
 import Project from './components/Project.js';
+import Login from './pages/Login.js'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
