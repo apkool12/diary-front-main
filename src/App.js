@@ -1,28 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
-import Navbar from './components/Navbar.js';
-import HomePage from './pages/HomePage';
-import Diary from './pages/Diary';
-import DevLog from './pages/DevLog';
-import Profile from './components/Profile';
-import Settings from './pages/Settings';
-import Project from './components/Project.js';
-import Login from './pages/Login.js'
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import AnimatedRoutes from './components/AnimatedRoutes';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/diary" element={<Diary />} />
-        <Route path="/devlog" element={<DevLog />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <div className="app">
+        <Navbar />
+        <div className="content">
+          <AnimatedRoutes />
+        </div>
+      </div>
     </Router>
   );
 }
